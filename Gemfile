@@ -73,3 +73,6 @@ end
 
 # Dotenv gem
 gem 'dotenv-rails'
+
+# Add bootstrap
+gem 'bootstrap', '~> 5.2'
