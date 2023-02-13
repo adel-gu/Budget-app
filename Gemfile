@@ -82,3 +82,6 @@ gem "bootstrap_form", "~> 5.1"
 
 # Add devise
 gem 'devise'
+
+# Add cancancan
+gem 'cancancan'
