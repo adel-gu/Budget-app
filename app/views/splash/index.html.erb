@@ -1,2 +1,12 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
+<section class="pt-5 bg-light position-absolute top-0 start-0" style="height: 100vh; width: 100vw">
+  <div class="container ">
+    <div class="text-center pt-5">
+        <h1>IN💲TANT BUDGET</h1>
+        <p>Instant Budget provides track of daily transaction that helps make wise financial desicions</p>
+    </div>
+    <div class="mx-auto" style="width: 8rem; margin-top: 5em;">
+      <%= link_to "Sign In", new_user_session_path, class:"btn btn-success mb-3 py-2", style:"width: 100%" %>
+      <%= link_to "Sign Up", new_user_registration_path ,class:"btn btn-outline-dark py-2", style:"width: 100%" %>
+    </div>
+  </div>
+</section>
