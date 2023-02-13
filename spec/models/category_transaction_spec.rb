@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CategoryTransaction, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # Test associations
+  it { should belong_to(:one_transaction) }
+  it { should belong_to(:one_category) }
 end
