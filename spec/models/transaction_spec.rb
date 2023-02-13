@@ -10,5 +10,4 @@ RSpec.describe Transaction, type: :model do
   it { should belong_to(:author) }
   it { should have_many(:category_transactions) }
   it { should have_many(:one_category).through(:category_transactions) }
-
 end

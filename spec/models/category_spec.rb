@@ -14,7 +14,7 @@ RSpec.describe Category, type: :model do
 
   # Test instance methods
   context 'check validation' do
-    subject { Category.new(name:'Games', icon: 'games.jpg', author: user) }
+    subject { Category.new(name: 'Games', icon: 'games.jpg', author: user) }
 
     before { subject.save }
 
