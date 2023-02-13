@@ -1,8 +1,8 @@
 class Category < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
   has_many :category_transactions
-  has_many :transactions, through: :category_transactions
-  validate :name, :icon, presence: true
+  has_many :one_transaction, through: :category_transactions
+  validates :name, :icon, presence: true
 
   def category_total_amount
     self.transactions.sum(:amount)
