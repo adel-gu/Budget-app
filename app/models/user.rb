@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :categories
   has_many :transactions
+  validate :full_name, presence: true, length: { maximum: 50 }
 end
