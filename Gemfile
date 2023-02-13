@@ -76,3 +76,6 @@ gem 'dotenv-rails'
 
 # Add bootstrap
 gem 'bootstrap', '~> 5.2'
+
+# Bootstrap ror form
+gem "bootstrap_form", "~> 5.1"
