@@ -90,4 +90,4 @@ gem 'cancancan'
 
 gem 'factory_bot_rails'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
