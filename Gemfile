@@ -89,3 +89,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'factory_bot_rails'
+
+gem 'font-awesome-rails'

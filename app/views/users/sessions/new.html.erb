@@ -1,26 +1,26 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section>
+  <div class="bg-success text-white d-flex justify-content-between align-items-center px-3">
+    <%= link_to :back, class:"text-white", style:"font-size: 1.8rem" do %>
+      <%= fa_icon "arrow-left" %>
+    <% end %>
+    <h2 class="bg-success py-3">LOGIN</h2>
+    <p class="mt-4">Log In</p>
   </div>
+  <div class="container-fluid mt-3">
+    <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"rounded-0", hide_label: true, placeholder: "Email", required: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", class:"rounded-0",hide_label: true, placeholder: "Password", required: true %>
+      </div>
+
+      <div class="actions" style="margin-top: 8em">
+        <%= f.submit "Log in", class:"btn btn-success rounded-0 w-100"%>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</section>
