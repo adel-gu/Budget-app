@@ -9,10 +9,6 @@
   <div class="container-fluid mt-3">
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.text_field :f_name, class:"rounded-0", hide_label: true, placeholder: "Full Name", required: true %>
-      </div>
-
-      <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"rounded-0", hide_label: true, placeholder: "Email", required: true %>
       </div>
 
