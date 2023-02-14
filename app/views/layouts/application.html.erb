@@ -11,8 +11,15 @@
   </head>
 
   <body class="bg-light">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice && notice.empty? %>
+      <div class="alert alert-success" role="alert">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif alert && alert.empty?  %>
+      <div class="alert alert-danger" role="alert">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
