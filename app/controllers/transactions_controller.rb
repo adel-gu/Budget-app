@@ -5,7 +5,6 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:category_id])
     @transaction = Transaction.new
     respond_to do |format|
       format.html { render :new, locals: { transaction: @transaction } }
