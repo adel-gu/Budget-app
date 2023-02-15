@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'categories/index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -10,4 +9,6 @@ Rails.application.routes.draw do
   end
 
   root to: "splash#index", as: :unauthenticated_user
+
+  resources :categories, only: [:index, :show, :new, :create]
 end
