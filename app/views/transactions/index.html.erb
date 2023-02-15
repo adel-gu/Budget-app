@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-success">
+  <div class="container-fluid felx-row">
+    <button class="navbar-toggler border-0 btn-outline-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="" role="button" ><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <%= link_to 'Home', categories_path, class:"nav-link text-white" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Transactions', categories_path, class:"nav-link text-white" %>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="bg-success text-white"><%= @category.name %>: $<%= @category.category_total_amount %></h4>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <%= render partial: "transaction", collection: @transactions %>
+</div>
+<%= link_to "Add New Transaction", new_category_transaction_path(@category), class:"btn btn-success rounded-0 w-100" %>
