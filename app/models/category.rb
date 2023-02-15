@@ -4,10 +4,10 @@ class Category < ApplicationRecord
   validates :name, :icon, presence: true
 
   def category_total_amount
-    self.transactions.sum(:amount)
+    transactions.sum(:amount)
   end
 
   def category_recent_transactions
-    self.transactions.order(updated_at: :desc)
+    transactions.order(updated_at: :desc)
   end
 end
