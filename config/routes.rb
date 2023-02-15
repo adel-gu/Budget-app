@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   root to: "splash#index", as: :unauthenticated_user
 
-  resources :categories, only: [:index, :show, :new, :create]
+  resources :categories, only: [:index, :show, :new, :create] do
+    resources :transactions, only: [:index]
+  end
 end
