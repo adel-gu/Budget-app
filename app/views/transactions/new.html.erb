@@ -10,7 +10,7 @@
         <%= f.number_field :amount, autofocus: true, class:"rounded-0", hide_label: true, step: "any", placeholder: "$0.00", required: true %>
       </div>
       <div class="field">
-        <%= f.select :category_id, Category.all.collect {|category| [category.name, category.id]}, class:"rounded-0", hide_label: true, required: true%>
+        <%= f.select :category_id, @categories.collect {|category| [category.name, category.id]}, class:"rounded-0", hide_label: true, required: true%>
       </div>
 
       <div class="actions" style="margin-top: 5em">
