@@ -1,12 +1,14 @@
-<div class="card flex-row align-items-center p-3 my-3 rounded-0">
-  <div class="border border-dark" style="width: 5rem; height: 5rem">
-    <img src=<%= category.icon %> class="card-img-top" alt=<%= category.name %>>
-  </div>
-  <div class="card-body">
-    <div class="d-flex justify-content-between">
-      <h5 class="card-title"><%= category.name %></h5>
-      <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
+<%= link_to category_transactions_path(category), class:"text-dark", style:"text-decoration: none;" do %>
+  <div class="card flex-row align-items-center p-3 my-3 rounded-0">
+    <div style="width: 5rem; height: 5rem">
+      <img src=<%= category.icon %> class="card-img-top" alt=<%= category.name %>>
     </div>
-    <p class="position-relative" style="top: 1em"><%= category.updated_at %></p>
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title"><%= category.name %></h5>
+        <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
+      </div>
+      <p class="position-relative" style="top: 1em"><%= category.updated_at %></p>
+    </div>
   </div>
-</div>
+<% end %>
