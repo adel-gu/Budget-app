@@ -5,7 +5,7 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @categories = Category.includes(:transactions).where(author: current_user)
+    @categories = Category.where(author: current_user)
     @transaction = Transaction.new
     respond_to do |format|
       format.html { render :new, locals: { transaction: @transaction } }
