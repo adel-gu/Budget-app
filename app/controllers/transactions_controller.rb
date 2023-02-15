@@ -13,8 +13,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:category_id])
-    @transaction = Transaction.new(transaction_params(@category))
+    @transaction = Transaction.new(transaction_params)
 
     respond_to do |format|
       format.html do
@@ -31,7 +30,7 @@ class TransactionsController < ApplicationController
 
   private
 
-  def transaction_params(category)
-    params.require(:transaction).permit(:name, :amount).merge(author: current_user, category:)
+  def transaction_params
+    params.require(:transaction).permit(:name, :amount, :category_id).merge(author: current_user)
   end
 end
