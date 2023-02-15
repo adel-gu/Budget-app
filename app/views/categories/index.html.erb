@@ -1,6 +1,6 @@
 <h4 class="bg-success text-center text-white pb-2">Categories</h4>
 <section>
-  <div class="container">
+  <div class="container mb-5">
     <%= render partial: "category", collection: @categories %>
   </div>
   <%= link_to "Add New Category", new_category_path, class:"btn btn-success rounded-0 w-100 position-fixed bottom-0" %>
