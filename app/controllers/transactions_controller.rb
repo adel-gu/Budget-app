@@ -1,6 +1,6 @@
 class TransactionsController < ApplicationController
   def index
-    @category = Category.includes(:one_transaction).find(params[:category_id])
+    @category = Category.includes(:transactions).find(params[:category_id])
     @transactions = @category.category_recent_transactions
   end
 
@@ -14,12 +14,11 @@ class TransactionsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    @transaction = Transaction.new(transaction_params)
+    @transaction = Transaction.new(transaction_params(@category))
 
     respond_to do |format|
       format.html do
         if @transaction.save
-          CategoryTransaction.create(one_category: @category, one_transaction: @transaction)
           flash[:sucess] = 'transaction Saved Successfully'
           redirect_to categories_path
         else
@@ -32,7 +31,7 @@ class TransactionsController < ApplicationController
 
   private
 
-  def transaction_params
-    params.require(:transaction).permit(:name, :amount).merge(author: current_user)
+  def transaction_params(category)
+    params.require(:transaction).permit(:name, :amount).merge(author: current_user, category:)
   end
 end
