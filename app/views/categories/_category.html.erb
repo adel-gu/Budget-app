@@ -1,6 +1,6 @@
 <%= link_to category_transactions_path(category), class:"text-dark", style:"text-decoration: none;" do %>
   <div class="card flex-row align-items-center p-3 my-3 rounded-0">
-    <div style="width: 5rem; height: 5rem">
+    <div style="width: 5rem; height: 5rem; object-fit: cover; overflow: hidden;">
       <img src=<%= category.icon %> class="card-img-top" alt=<%= category.name %>>
     </div>
     <div class="card-body">
