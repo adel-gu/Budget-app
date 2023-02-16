@@ -95,7 +95,7 @@ Instant Budget is a mobile web application that can helps you keep track of your
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://instant-budget-app.onrender.com/)
+- [Live Demo Link](https://instant-budget-app-vy5i.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
