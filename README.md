@@ -34,6 +34,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [📷 Video Recording](#video-record)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -95,6 +96,12 @@ Instant Budget is a mobile web application that can helps you keep track of your
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://instant-budget-app.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📷 Video Recording <a name="video-record"></a>
+
+- [Video Recoding me explaining the project](https://www.loom.com/share/6016b59e301747da96e9ae80899a3eab)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,7 +205,8 @@ If you like this project please help it stand out by giving it a star ✨
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microvers for providing this great opportunity and for the project guide as well 👏
+- I would like to thank Microvers for providing this great opportunity and for the project guide as well 👏
+- Huge appriciation to [Gregoire Vella](https://www.behance.net/gregoirevella) for providing design system guidelines since this project is built upon that ✨ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
