@@ -9,8 +9,7 @@ RSpec.describe Category, type: :model do
 
   # Test associations
   it { should belong_to(:author) }
-  it { should have_many(:category_transactions) }
-  it { should have_many(:one_transaction).through(:category_transactions) }
+  it { should have_many(:transactions) }
 
   # Test instance methods
   context 'check validation' do

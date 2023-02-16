@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <div class="bg-success text-white d-flex justify-content-between align-items-center container-fluid">
+      <%= link_to categories_path, class:"text-white", style:"font-size: 1.8rem" do %>
+        <%= fa_icon "arrow-left" %>
+      <% end %>
+      <%= button_to destroy_user_session_path, class:"btn btn-danger rounded-circle mt-2", :method => :delete do %>
+        <span style="font-weight: bold">&#10555;</span>
+      <% end %>
+  </div>
+<%end%>
